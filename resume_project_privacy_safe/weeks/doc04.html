@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <h3>다양한 입력 폼</h3>
+
+   <form method="get" action="https://lib.smu.ac.kr/search/">
+
+      검색어: <input type="text" name="q"/> <br>
+      이메일: <input type="email" name="email" placeholder="id@gmail.com"/> <br>
+      <!-- 전화번호 입력: <input type="tel" placeholder="00*-000*-0000" pattern="[0-9]{2-3}"/> <br> -->
+      캠퍼스: <input type="radio" name="campuscode" value="00"/>서울
+               <input type="radio" name="campuscode" value="01" checked/>천안<br>
+ 
+                     직업: <select name="job"  size="2">
+
+                  <option>학생</option> <option>회사원</option>
+
+                  <option>공무원</option> <option>기타</option>
+                
+               
+            </select>
+
+   <p> 구입희망분야(복수선택 가능)<br>
+
+    - 분야: <input type="checkbox" name="books" value="computer"/>컴퓨터
+
+               <input type="checkbox" name="books" value="economy"/>경제
+
+               <input type="checkbox" name="books" value="common"/>상식<br>
+
+      비고: <br>
+
+              <textarea name="comments" rows="4" cols="40"/></textarea>
+
+    </p> <hr>
+
+           <input type="submit" value="신청"/>
+
+           <input type="reset" value="취소"/>
+
+            <input type="button" value="전송하기"/> &nbsp;
+   </form>
+    <head>
+        <meta charset=""UTF-8">
+        <style type="text/css">
+            ol li {list-style-type: lower-alpha;}
+            ol {list-style-position: inside;}
+            ul {list-style-position: outside;}
+            li.kor {list-style-type: circle;}
+            li.usa {list-style-type: square;}
+            /* li.usa {list-style-image: url(.gif);} 머릿말에 쓰는 거니까 간단한 이미지를 띄울 수 있는 gif를 쓰는 게 좋음*/
+            #book {width:50%; min-width: 600px; border-spacing: 8px;
+            transform: rotate(90);}
+            p {background-color: papayawhip;} 
+            p :hover {background-color: palegreen; transition: background-color 5s;}
+            ul {background-color: plum;}
+            li {background-color: violet;}
+            td {background-color: violet;}
+        </style>
+    </head>    
+        <body>
+            <p>순서가 없는 목록</p>
+            <ul>
+                <li class="usa">첫번째</li>
+                <li class="kor">두번째</li>
+                <li class="usa">세번째</li>
+            </ul>
+            <p>순서가 있는 목록</p>
+            <ol>
+                <li>첫번째</li>
+                <li>두번째</li>
+                <li>세번째</li>
+            </ol>
+            
+            <table border="1" id="book">
+                <tfoot>
+                <tr>
+                    <th>합계</th>
+                    <td colspan="3">2권</td>
+                </tr>
+                </tfoot>
+
+                <thead>
+                    <tr>
+                        <th>과목</th>
+                        <th>책제목</th>
+                        <th>저자</th>
+                        <th>출판사</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td rowspan="2">웹프로그래밍</td>
+                        <td>HTML5</td>
+                        <td>임순범</td>
+                        <td>생능</td>
+                    </tr>
+
+                    <tr>
+                        <td>소셜미디어</td>
+                        <td>최윤철</td>
+                        <td>생능</td>
+                    </tr>
+                </tbody>
+            </table>
+        </body>
+
+
+</html>
+
